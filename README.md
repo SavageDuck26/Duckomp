@@ -8,3 +8,18 @@ As of my testing it has a 100% success rate, but fails to compress data enough f
 Duckomp-v5: Reads offsets (which are meant to be substrings) and hunts for seeds that match those offsets using GPU.
 The idea here is that substrings outside of a Zstd window are ALWAYS held in a single seed, computing it is the only constraint.
 As of my testing, this does work on smaller data sets, but the time increase on larger offsets is exponential.
+
+Duckomp-v6: Creates a "phonebook" of every possible offset given the data. 
+The next step is to make a file to binary search through the offset permutations to find the right one, essentially v5 but fast.
+v6 is meant to show the process and under-the-hood view of how it works. Such as:
+
+Offsets: 3, 4, 1, 4, 1. (Which would come from 'random' data that would be much larger in practice)
+Perm 0: [1,1,1,1,1]
+Perm 40: [1,2,2,2,2]
+Perm 41: [1,2,2,2,3]
+Perm 42: [1,2,2,3,1]
+Perm 106: [2,1,3,3,2]
+Perm 107: [2,1,3,3,3]
+Perm 1022: [4,4,4,4,3]
+Perm 1023: [4,4,4,4,4]
+
