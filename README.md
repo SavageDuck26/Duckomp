@@ -14,12 +14,15 @@ The next step is to make a file to binary search through the offset permutations
 v6 is meant to show the process and under-the-hood view of how it works. Such as:
 
 Offsets: 3, 4, 1, 4, 1. (Which would come from 'random' data that would be much larger in practice)
-- Perm 0: [1,1,1,1,1]
-- Perm 40: [1,2,2,2,2]
-- Perm 41: [1,2,2,2,3]
-- Perm 42: [1,2,2,3,1]
-- Perm 106: [2,1,3,3,2]
-- Perm 107: [2,1,3,3,3]
-- Perm 1022: [4,4,4,4,3]
-- Perm 1023: [4,4,4,4,4]
+Perm 0: [1,1,1,1,1]
+Perm 40: [1,2,2,2,2]
+Perm 41: [1,2,2,2,3]
+Perm 42: [1,2,2,3,1]
+Perm 106: [2,1,3,3,2]
+Perm 107: [2,1,3,3,3]
+Perm 1022: [4,4,4,4,3]
+Perm 1023: [4,4,4,4,4]
 
+**Duckomp-v7:** Reads offsets and searches through them to find the "Seed".
+That seed is an integer, which then gets 'solvered' down to a smaller equation (Not optimized yet).
+This works very fast for massive data sets, but needs to be tested on data for Zstd, one can hope.
