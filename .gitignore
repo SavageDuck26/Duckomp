@@ -1,0 +1,79 @@
+# ===== OS generated files =====
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ===== Editor/IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.vs/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv/
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+*.log
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+
+# ===== Node / JS =====
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+.next/
+.nuxt/
+
+# ===== Environment / secrets =====
+.env
+.env.local
+.env.*.local
+*.pem
+
+# ===== Build outputs / artifacts (general) =====
+*.o
+*.obj
+*.exe
+*.dll
+*.class
+*.out
+target/
+bin/
+obj/
+
+# ===== Compressed / archives =====
+*.zip
+*.tar.gz
+*.rar
+
+# ===== Misc =====
+*.bak
+*.tmp
