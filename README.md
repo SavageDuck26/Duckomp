@@ -26,4 +26,3 @@ Offsets: 3, 4, 1, 4, 1. (Which would come from 'random' data that would be much 
 **Duckomp-v7:** Reads offsets and searches through them to find the "Seed".
 That seed is an integer, which then gets 'solvered' down to a smaller equation (Not optimized yet).
 This works very fast for massive data sets, but needs to be tested on data for Zstd, one can hope.
-
