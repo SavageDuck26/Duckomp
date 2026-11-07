@@ -1,0 +1,182 @@
+Duckomp-v8 report
+=================
+data        : 1537 offsets, 1536 gaps, range 1..900
+grid sweep  : 16 widths × 6 rules, Haar depth 3
+rule sweep  : column differences at width 32; 918 bytes = 7347 bits
+de-entropy  : width 32; 32/48 rows deleted (1024 of 1536 cells); 5839 bits vs 8792 kept (+2953 bits, +33.6%); exact yes  <- best overall
+
+Rule sweep
+----------
+All sizes are bytes. "Rule parameters" is what the rule's own settings cost.
+Every rule/width pair is rebuilt and checked; the optimal chunker runs on
+the best per-row candidates only, because a full search is quadratic.
+
+  Width  Rule                  Rule parameters  Fixed radix  Per-row radix  Optimal chunks  Rebuilds exactly
+      2  none                                2         1884           2160      not scored               yes
+      2  row differences                     2         2070           2694      not scored               yes
+      2  column differences                  2         2057           2189      not scored               yes
+      2  1D Haar lifting                     2         2069           2661      not scored               yes
+      2  2D Haar lifting                     2         2193           2294      not scored               yes
+      2  row rotation                       98         1884           2160      not scored               yes
+      3  none                                2         1884           1794      not scored               yes
+      3  row differences                     2         2058           2283      not scored               yes
+      3  column differences                  2         2055           1822      not scored               yes
+      3  1D Haar lifting                     2         2051           2249      not scored               yes
+      3  2D Haar lifting                     2         2150           1941      not scored               yes
+      3  row rotation                      130         1884           1794      not scored               yes
+      4  none                                2         1884           1574      not scored               yes
+      4  row differences                     2         2070           2051      not scored               yes
+      4  column differences                  2         2059           1601      not scored               yes
+      4  1D Haar lifting                     2         2069           2019      not scored               yes
+      4  2D Haar lifting                     2         2162           1693      not scored               yes
+      4  row rotation                       98         1884           1574      not scored               yes
+      5  none                                2         1884           1499      not scored               yes
+      5  row differences                     2         2061           1927      not scored               yes
+      5  column differences                  2         2055           1562      not scored               yes
+      5  1D Haar lifting                     2         2052           1894      not scored               yes
+      5  2D Haar lifting                     2         2163           1689      not scored               yes
+      5  row rotation                      117         1884           1499      not scored               yes
+      6  none                                2         1884           1416      not scored               yes
+      6  row differences                     2         2069           1833      not scored               yes
+      6  column differences                  2         2060           1466      not scored               yes
+      6  1D Haar lifting                     2         2069           1806      not scored               yes
+      6  2D Haar lifting                     2         2187           1594      not scored               yes
+      6  row rotation                       98         1884           1416      not scored               yes
+      8  none                                2         1884           1276      not scored               yes
+      8  row differences                     2         2069           1707      not scored               yes
+      8  column differences                  2         2068           1279      not scored               yes
+      8  1D Haar lifting                     2         2069           1678      not scored               yes
+      8  2D Haar lifting                     2         2133           1403      not scored               yes
+      8  row rotation                       74         1884           1276      not scored               yes
+      9  none                                2         1884           1329      not scored               yes
+      9  row differences                     2         2061           1693      not scored               yes
+      9  column differences                  2         2072           1455      not scored               yes
+      9  1D Haar lifting                     2         2059           1678      not scored               yes
+      9  2D Haar lifting                     2         2183           1571      not scored               yes
+      9  row rotation                       87         1884           1329      not scored               yes
+     12  none                                2         1884           1260      not scored               yes
+     12  row differences                     2         2069           1613      not scored               yes
+     12  column differences                  2         2071           1374      not scored               yes
+     12  1D Haar lifting                     2         2069           1592      not scored               yes
+     12  2D Haar lifting                     2         2198           1488      not scored               yes
+     12  row rotation                       66         1884           1260      not scored               yes
+     16  none                                2         1884           1150            1016               yes
+     16  row differences                     2         2069           1540      not scored               yes
+     16  column differences                  2         2060           1169            1088               yes
+     16  1D Haar lifting                     2         2069           1531      not scored               yes
+     16  2D Haar lifting                     2         2193           1284      not scored               yes
+     16  row rotation                       50         1884           1150            1019               yes
+     20  none                                2         1884           1277      not scored               yes
+     20  row differences                     2         2069           1551      not scored               yes
+     20  column differences                  2         2071           1483      not scored               yes
+     20  1D Haar lifting                     2         2069           1535      not scored               yes
+     20  2D Haar lifting                     2         2179           1537      not scored               yes
+     20  row rotation                       49         1884           1277      not scored               yes
+     24  none                                2         1884           1235      not scored               yes
+     24  row differences                     2         2069           1527      not scored               yes
+     24  column differences                  2         2068           1390      not scored               yes
+     24  1D Haar lifting                     2         2069           1512      not scored               yes
+     24  2D Haar lifting                     2         2176           1494      not scored               yes
+     24  row rotation                       42         1884           1235      not scored               yes
+     32  none                                2         1884           1097            1016               yes
+     32  row differences                     2         2069           1447      not scored               yes
+     32  column differences                  2         2061            950             916               yes  [WINNER]
+     32  1D Haar lifting                     2         2069           1479      not scored               yes
+     32  2D Haar lifting                     2         2144           1311      not scored               yes
+     32  row rotation                       32         1884           1097            1021               yes
+     48  none                                2         1884           1325      not scored               yes
+     48  row differences                     2         2069           1501      not scored               yes
+     48  column differences                  2         2074           1483      not scored               yes
+     48  1D Haar lifting                     2         2069           1482      not scored               yes
+     48  2D Haar lifting                     2         2135           1527      not scored               yes
+     48  row rotation                       26         1884           1325      not scored               yes
+     64  none                                2         1884           1313      not scored               yes
+     64  row differences                     2         2059           1454      not scored               yes
+     64  column differences                  2         2075           1305      not scored               yes
+     64  1D Haar lifting                     2         2069           1470      not scored               yes
+     64  2D Haar lifting                     2         2185           1464      not scored               yes
+     64  row rotation                       20         1884           1313      not scored               yes
+     96  none                                2         1884           1363      not scored               yes
+     96  row differences                     2         2059           1544      not scored               yes
+     96  column differences                  2         2074           1530      not scored               yes
+     96  1D Haar lifting                     2         2069           1519      not scored               yes
+     96  2D Haar lifting                     2         2150           1648      not scored               yes
+     96  row rotation                       16         1884           1363      not scored               yes
+    128  none                                2         1884           1329      not scored               yes
+    128  row differences                     2         2059           1474      not scored               yes
+    128  column differences                  2         2073           1521      not scored               yes
+    128  1D Haar lifting                     2         2069           1466      not scored               yes
+    128  2D Haar lifting                     2         2068           1752      not scored               yes
+    128  row rotation                       12         1884           1329      not scored               yes
+
+Winner: column differences at width 32 — 918 bytes = 7347 bits (7332 chunk bits + 15 parameter bits).
+Identity baseline: 1018 bytes = 8146 bits (8131 chunk bits + 15 parameter bits).
+Rebuild check: 96 of 96 rule/width pairs rebuild exactly (6 of 96 were scored).
+Rule gain: saves 100 bytes (9.8%) against keeping the data flat.
+
+De-entropy pass (best width 32)
+------------------------------
+Entropy before: 7.03 bits per cell. Entropy after, kept rows only: 8.09 bits per cell.
+Rows deleted: 32 of 48 (1024 of 1536 cells; 0 ragged tail cells). Rebuilt exactly: yes.
+Rules used: permutation 8, repeat 9, shift 7, constant 8, keep 16.
+Note: rows are ranked by entropy, but only rows a rule can rebuild are deleted,
+so the kept rows can be denser than the input average.
+Entropy deleted: 3840 bits of 10799 bits total.
+Cost: payload 5506 bits + shared multiset 160 bits + constant values 77 bits + rule tags 96 bits = 5839 bits (730 bytes).
+Against keeping every row: 8792 bits (1099 bytes) -> saves 2953 bits (33.6%).
+Reference: flat fixed radix 15074 bits; flat optimal chunks 8131 bits.
+Against the best rule-sweep result: 5839 bits vs 7347 bits (-1508 bits).
+Shared multiset (32 values):
+  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+  17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32
+
+Rows at width 32 (48 total; [Deleted] rows are rebuilt by the rule shown):
+  row    0 [Deleted]: permutation, rank 232788928108099220258776272388049143; rule cost 117.66 bits, entropy 5.00 bits.
+  row    1 [Deleted]: permutation, rank 99288015791672332292704203386366995; rule cost 117.66 bits, entropy 5.00 bits.
+  row    2 [Deleted]: permutation, rank 250063937946626559209197634176783992; rule cost 117.66 bits, entropy 5.00 bits.
+  row    3 [Deleted]: permutation, rank 171211611521744745246957969832583071; rule cost 117.66 bits, entropy 5.00 bits.
+  row    4 [Deleted]: repeat, source row 3; rule cost 5.58 bits, entropy 5.00 bits.
+  row    5 [Deleted]: repeat, source row 3; rule cost 5.58 bits, entropy 5.00 bits.
+  row    6 [Deleted]: repeat, source row 3; rule cost 5.58 bits, entropy 5.00 bits.
+  row    7 [Deleted]: repeat, source row 3; rule cost 5.58 bits, entropy 5.00 bits.
+  row    8 [Deleted]: shift, source row 3, shift 5; rule cost 10.58 bits, entropy 5.00 bits.
+  row    9 [Deleted]: shift, source row 3, shift 29; rule cost 10.58 bits, entropy 5.00 bits.
+  row   10 [Deleted]: repeat, source row 8; rule cost 5.58 bits, entropy 5.00 bits.
+  row   11 [Deleted]: shift, source row 3, shift 18; rule cost 10.58 bits, entropy 5.00 bits.
+  row   12 [Deleted]: constant, value 401; rule cost 0.00 bits, entropy 0.00 bits.
+  row   13 [Deleted]: constant, value 893; rule cost 0.00 bits, entropy 0.00 bits.
+  row   14 [Deleted]: constant, value 509; rule cost 0.00 bits, entropy 0.00 bits.
+  row   15 [Deleted]: constant, value 83; rule cost 0.00 bits, entropy 0.00 bits.
+  row   16 [Kept]   : keep; row cost 225.75 bits, entropy 5.00 bits.
+  row   17 [Kept]   : keep; row cost 224.75 bits, entropy 5.00 bits.
+  row   18 [Kept]   : keep; row cost 225.25 bits, entropy 5.00 bits.
+  row   19 [Kept]   : keep; row cost 225.25 bits, entropy 5.00 bits.
+  row   20 [Kept]   : keep; row cost 324.60 bits, entropy 4.94 bits.
+  row   21 [Kept]   : keep; row cost 327.94 bits, entropy 4.94 bits.
+  row   22 [Kept]   : keep; row cost 328.95 bits, entropy 4.94 bits.
+  row   23 [Kept]   : keep; row cost 328.58 bits, entropy 4.94 bits.
+  row   24 [Deleted]: permutation, rank 194587692821556767209355081866274477; rule cost 117.66 bits, entropy 5.00 bits.
+  row   25 [Deleted]: permutation, rank 258177074438334025414208286406368299; rule cost 117.66 bits, entropy 5.00 bits.
+  row   26 [Deleted]: permutation, rank 135015088335612353133848853486316382; rule cost 117.66 bits, entropy 5.00 bits.
+  row   27 [Deleted]: permutation, rank 59515549931916674838156394745862010; rule cost 117.66 bits, entropy 5.00 bits.
+  row   28 [Deleted]: repeat, source row 27; rule cost 5.58 bits, entropy 5.00 bits.
+  row   29 [Deleted]: repeat, source row 27; rule cost 5.58 bits, entropy 5.00 bits.
+  row   30 [Deleted]: repeat, source row 27; rule cost 5.58 bits, entropy 5.00 bits.
+  row   31 [Deleted]: repeat, source row 27; rule cost 5.58 bits, entropy 5.00 bits.
+  row   32 [Deleted]: shift, source row 27, shift 13; rule cost 10.58 bits, entropy 5.00 bits.
+  row   33 [Deleted]: shift, source row 27, shift 18; rule cost 10.58 bits, entropy 5.00 bits.
+  row   34 [Deleted]: shift, source row 27, shift 4; rule cost 10.58 bits, entropy 5.00 bits.
+  row   35 [Deleted]: shift, source row 27, shift 2; rule cost 10.58 bits, entropy 5.00 bits.
+  row   36 [Deleted]: constant, value 528; rule cost 0.00 bits, entropy 0.00 bits.
+  row   37 [Deleted]: constant, value 585; rule cost 0.00 bits, entropy 0.00 bits.
+  row   38 [Deleted]: constant, value 507; rule cost 0.00 bits, entropy 0.00 bits.
+  row   39 [Deleted]: constant, value 718; rule cost 0.00 bits, entropy 0.00 bits.
+  row   40 [Kept]   : keep; row cost 225.75 bits, entropy 5.00 bits.
+  row   41 [Kept]   : keep; row cost 226.24 bits, entropy 5.00 bits.
+  row   42 [Kept]   : keep; row cost 225.75 bits, entropy 5.00 bits.
+  row   43 [Kept]   : keep; row cost 226.72 bits, entropy 5.00 bits.
+  row   44 [Kept]   : keep; row cost 328.42 bits, entropy 5.00 bits.
+  row   45 [Kept]   : keep; row cost 326.86 bits, entropy 5.00 bits.
+  row   46 [Kept]   : keep; row cost 327.56 bits, entropy 5.00 bits.
+  row   47 [Kept]   : keep; row cost 325.74 bits, entropy 5.00 bits.
+

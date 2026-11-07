@@ -26,3 +26,9 @@ Offsets: 3, 4, 1, 4, 1. (Which would come from 'random' data that would be much 
 **Duckomp-v7:** Reads offsets and searches through them to find the "Seed".
 That seed is an integer, which then gets 'solvered' down to a smaller equation (Not optimized yet).
 This works very fast for massive data sets, but needs to be tested on data for Zstd, one can hope.
+
+**Duckomp-v8:** Reads offsets into a sudoku-like grid, then uses a ruleset to delete high-entropy rows. 
+This data can be re-derived by the data surrounding it and the ruleset, like a half-solved sudoku. 
+Currently, only rows are deleted, but doing just cells is also possible. 
+A theory I would like to explore as well, is if it would be possible to remove entire grids, 
+or most of them, and then derive that grid from the grids around it. Grids inside of grids, etc. 
